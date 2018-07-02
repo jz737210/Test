@@ -1,0 +1,149 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.laoyouqian.yqqtp</groupId>
+  <artifactId>YQQTP.Trader</artifactId>
+  <version>0.16.4-SNAPSHOT</version>
+  <name>YQQTP.Trader</name>
+  <description>邮钱乾通用交易平台 交易者</description>
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>http://repo.maven.apache.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>central1</id>
+			<name>Central Repository1</name>
+			<url>http://repo1.maven.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spy</id>
+			<name>Spy Repository</name>
+			<url>http://files.couchbase.com/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>xerces</id>
+			<name>xerces</name>
+			<url>https://xerces.apache.org/xerces2-j/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>proxool</id>
+			<name>proxool</name>
+			<url>http://proxool.cvs.sourceforge.net/viewvc/proxool/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>oschinaMavenThirdparty</id>
+			<name>oschinaMavenThirdparty</name>
+			<url>http://maven.oschina.net/content/repositories/thirdparty/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<!---->
+		<repository>
+			<id>osc</id>
+			<name>oschina</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+  
+  	
+	<profiles>  
+	    <profile>  
+	        <id>jdk-1.7</id>  
+	        <activation>  
+	            <activeByDefault>true</activeByDefault>  
+	            <jdk>1.7</jdk>  
+	        </activation>  
+	        <properties>  
+	            <maven.compiler.source>1.7</maven.compiler.source>  
+	            <maven.compiler.target>1.7</maven.compiler.target>  
+	            <maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>  
+	        </properties>  
+	    </profile>   
+	 </profiles>
+  
+  <dependencies>
+  		<!-- dubbo 基础包 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.jboss.netty</groupId>
+        	<artifactId>netty</artifactId>
+        	<version>3.2.5.Final</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-context</artifactId>
+        	<version>4.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.javassist</groupId>
+        	<artifactId>javassist</artifactId>
+        	<version>3.15.0-GA</version>
+        </dependency>
+        <dependency>
+        	<groupId>log4j</groupId>
+        	<artifactId>log4j</artifactId>
+        	<version>1.2.16</version>
+        </dependency>
+        <dependency>
+        	<groupId>commons-logging</groupId>
+        	<artifactId>commons-logging</artifactId>
+        	<version>1.1.1</version>
+        </dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+      <!-- dubbo 基础包 -->
+  
+  		<dependency>
+        	<groupId>com.laoyouqian.yqqtp</groupId>
+        	<artifactId>YQQTP.Pojo</artifactId>
+            <version>0.16.4-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>com.laoyouqian.yqqtp</groupId>
+        	<artifactId>YQQTP.Interface</artifactId>
+            <version>0.16.4-SNAPSHOT</version>
+        </dependency>
+  </dependencies>
+</project>
